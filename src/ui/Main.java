@@ -1,5 +1,5 @@
 package ui;
-
+import model.Classroom;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,10 +8,12 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 	
-	ClassroomGUI cg;
+	private ClassroomGUI cg;
+	private Classroom classroom;
 	
 	public Main() {
-		cg = new ClassroomGUI();
+		classroom = new Classroom();
+		cg = new ClassroomGUI(classroom);
 	}//End Constructor
 	
 	public static void main(String[] args){
@@ -20,10 +22,10 @@ public class Main extends Application {
 	
 	@Override
 	public void start(Stage window) throws Exception {
-		FXMLLoader fxml = new FXMLLoader(getClass().getResource("LoginWindow.fxml"));
+		FXMLLoader fxml = new FXMLLoader(getClass().getResource("MainPane.fxml"));
 		fxml.setController(cg);
 		Parent root = fxml.load();
-		Scene scene = new Scene(root);
+		Scene scene = new Scene(root,null);
 		window.setTitle("ClassromGUI");
 		window.setScene(scene);
 		window.show();

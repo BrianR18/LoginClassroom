@@ -52,4 +52,5 @@ public class User {
 	public String getFavoriteBrowser(){
 		return favoriteBrowser;
 	}//End getFavoriteBrowser
+	
 }//End User

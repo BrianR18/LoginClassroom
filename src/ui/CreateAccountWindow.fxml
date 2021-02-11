@@ -8,6 +8,7 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
@@ -51,25 +52,34 @@
          <font>
             <Font size="13.0" />
          </font></Label>
-      <TextField layoutX="199.0" layoutY="108.0" />
-      <PasswordField layoutX="199.0" layoutY="147.0" />
-      <TextField editable="false" layoutX="199.0" layoutY="188.0" />
-      <RadioButton layoutX="178.0" layoutY="226.0" mnemonicParsing="false" text="Male" />
-      <RadioButton layoutX="244.0" layoutY="226.0" mnemonicParsing="false" text="Female" />
-      <RadioButton layoutX="311.0" layoutY="226.0" mnemonicParsing="false" text="Other" />
-      <CheckBox layoutX="185.0" layoutY="265.0" mnemonicParsing="false" text="Software Engineering" />
-      <CheckBox layoutX="185.0" layoutY="291.0" mnemonicParsing="false" text="Telematic Engineering" />
-      <CheckBox layoutX="185.0" layoutY="316.0" mnemonicParsing="false" text="Industrial Engineering" />
-      <DatePicker layoutX="199.0" layoutY="349.0" />
-      <ComboBox layoutX="198.0" layoutY="391.0" prefWidth="150.0" />
-      <Button layoutX="176.0" layoutY="437.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #33CEFF;" text="Sign in" textFill="WHITE">
+      <TextField fx:id="txtUsername" layoutX="199.0" layoutY="108.0" />
+      <PasswordField fx:id="txtPassword" layoutX="199.0" layoutY="147.0" />
+      <TextField fx:id="pathPhoto" editable="false" layoutX="199.0" layoutY="188.0" />
+      <RadioButton fx:id="male" layoutX="178.0" layoutY="226.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="female" layoutX="244.0" layoutY="226.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+      <RadioButton fx:id="other" layoutX="311.0" layoutY="226.0" mnemonicParsing="false" selected="true" text="Other" toggleGroup="$gender" />
+      <CheckBox fx:id="software" layoutX="185.0" layoutY="265.0" mnemonicParsing="false" text="Software Engineering" />
+      <CheckBox fx:id="telematic" layoutX="185.0" layoutY="291.0" mnemonicParsing="false" text="Telematic Engineering" />
+      <CheckBox fx:id="industrial" layoutX="185.0" layoutY="316.0" mnemonicParsing="false" text="Industrial Engineering" />
+      <DatePicker fx:id="date" layoutX="199.0" layoutY="349.0" />
+      <ComboBox fx:id="cbFavoriteBrowser" layoutX="198.0" layoutY="391.0" prefWidth="150.0" />
+      <Button layoutX="176.0" layoutY="437.0" mnemonicParsing="false" onAction="#loadLoginWindow" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #33CEFF;" text="Sign in" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="275.0" layoutY="437.0" mnemonicParsing="false" style="-fx-background-color: #33CEFF;" text="Create account" textFill="WHITE">
+      <Button layoutX="275.0" layoutY="437.0" mnemonicParsing="false" onAction="#registerUser" style="-fx-background-color: #33CEFF;" text="Create account" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
+      <Button layoutX="362.0" layoutY="188.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="69.0" style="-fx-background-color: #33CEFF;" text="Browse" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
