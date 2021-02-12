@@ -28,6 +28,7 @@ public class Main extends Application {
 		Scene scene = new Scene(root,null);
 		window.setTitle("ClassromGUI");
 		window.setScene(scene);
+		cg.loadLoginWindow();
 		window.show();
 	}//End start
 

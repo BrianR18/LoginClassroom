@@ -62,7 +62,7 @@
       </RadioButton>
       <RadioButton fx:id="female" layoutX="244.0" layoutY="226.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
       <RadioButton fx:id="other" layoutX="311.0" layoutY="226.0" mnemonicParsing="false" selected="true" text="Other" toggleGroup="$gender" />
-      <CheckBox fx:id="software" layoutX="185.0" layoutY="265.0" mnemonicParsing="false" text="Software Engineering" />
+      <CheckBox fx:id="software" layoutX="185.0" layoutY="265.0" mnemonicParsing="false" selected="true" text="Software Engineering" />
       <CheckBox fx:id="telematic" layoutX="185.0" layoutY="291.0" mnemonicParsing="false" text="Telematic Engineering" />
       <CheckBox fx:id="industrial" layoutX="185.0" layoutY="316.0" mnemonicParsing="false" text="Industrial Engineering" />
       <DatePicker fx:id="date" layoutX="199.0" layoutY="349.0" />
@@ -76,7 +76,7 @@
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <Button layoutX="362.0" layoutY="188.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="69.0" style="-fx-background-color: #33CEFF;" text="Browse" textFill="WHITE">
+      <Button layoutX="362.0" layoutY="188.0" mnemonicParsing="false" onAction="#chooseProfilePhoto" prefHeight="4.0" prefWidth="69.0" style="-fx-background-color: #33CEFF;" text="Browse" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

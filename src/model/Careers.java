@@ -1,0 +1,7 @@
+package model;
+
+public enum Careers {
+	SOFTWARE_ENGINEERING,
+	TELEMATIC_ENGINEERING,
+	INDUSTRIAL_ENGINEERING
+};
