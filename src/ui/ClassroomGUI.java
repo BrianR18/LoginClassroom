@@ -220,7 +220,7 @@ public class ClassroomGUI {
 	public void logout(){
 		currentUserData = null;
 		try {
-			loadContactListWindow();
+			loadLoginWindow();
 		}catch(IOException e){}
 	}//End logout
 }//End ClassroomGUI
