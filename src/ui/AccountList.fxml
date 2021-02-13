@@ -30,7 +30,7 @@
         </columns>
       </TableView>
       <ImageView fx:id="profilePhoto" fitHeight="57.0" fitWidth="80.0" layoutX="482.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="listName" layoutX="409.0" layoutY="33.0" prefHeight="17.0" prefWidth="63.0" textAlignment="CENTER">
+      <Label fx:id="listName" alignment="CENTER_RIGHT" layoutX="283.0" layoutY="33.0" prefHeight="26.0" prefWidth="189.0" text="a" textAlignment="RIGHT">
          <font>
             <Font name="System Bold Italic" size="17.0" />
          </font></Label>
